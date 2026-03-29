@@ -268,6 +268,12 @@ h1 {
     gap: 0.65rem;
 }
 
+.domain-list li {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.45rem;
+}
+
 .domain-list a {
     display: inline-flex;
     padding: 0.6rem 0.9rem;
@@ -292,6 +298,20 @@ h1 {
     transform: translateY(-2px);
     border-color: rgba(154, 52, 18, 0.45);
     background: var(--accent-soft);
+}
+
+.status-chip {
+    display: inline-flex;
+    align-items: center;
+    min-height: 2rem;
+    padding: 0.3rem 0.7rem;
+    border-radius: 999px;
+    background: #1c1917;
+    color: #fff;
+    font-size: 0.78rem;
+    font-weight: 700;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
 }
 
 .site-footer {

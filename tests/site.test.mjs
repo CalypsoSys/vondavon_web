@@ -28,8 +28,11 @@ test("homepage includes semantic sections and local stylesheet", () => {
 
 test("homepage retains a broad set of secure outbound links", () => {
     const matches = [...indexHtml.matchAll(/href="(https:\/\/[^"]+)"/g)].map((match) => match[1]);
-    assert.ok(matches.length >= 40, `expected at least 40 https links, got ${matches.length}`);
+    assert.equal(matches.length, 32, `expected 32 https links, got ${matches.length}`);
     assert.equal(matches.every((href) => href.startsWith("https://")), true);
+    assert.ok(matches.includes("https://myprocurevision.com"));
+    assert.ok(matches.includes("https://procurevision.dev"));
+    assert.equal(matches.includes("https://babaluentertainmentgroup.com"), false);
 });
 
 test("404 page links back to the homepage", () => {
